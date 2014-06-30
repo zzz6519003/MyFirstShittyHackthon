@@ -112,6 +112,9 @@
 - (void)questDidAccepted:(QuestCell *)cell withQuestId:(NSInteger)questId {
     AVObject *a = self.questArray[questId];
     NSArray *b = @[@"53b7b729e4b0cdeb6e247f94"];
+    AVUser * currentUser = [AVUser currentUser];
+    [currentUser setObject:b forKey:@"questIDs"];
+    [currentUser saveInBackground];
     
 }
 
