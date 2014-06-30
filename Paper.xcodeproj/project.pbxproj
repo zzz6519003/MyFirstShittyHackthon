@@ -19,6 +19,11 @@
 		1811471B1961440200E93C23 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1811471A1961440200E93C23 /* CoreTelephony.framework */; };
 		1811471D1961440700E93C23 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1811471C1961440700E93C23 /* CoreLocation.framework */; };
 		1811471F1961441500E93C23 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1811471E1961441500E93C23 /* libicucore.dylib */; };
+		1811472519615A1000E93C23 /* QuestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1811472419615A1000E93C23 /* QuestCell.m */; };
+		1811472719615A1E00E93C23 /* QuestCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1811472619615A1E00E93C23 /* QuestCell.xib */; };
+		186D6EB21961A58B00539A36 /* HAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186D6EB11961A58B00539A36 /* HAViewController.m */; };
+		186D6EB81961B1C100539A36 /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 186D6EB51961B1C100539A36 /* FBShimmeringLayer.m */; };
+		186D6EB91961B1C100539A36 /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186D6EB71961B1C100539A36 /* FBShimmeringView.m */; };
 		1A1B02CB18AAF00D000DE3F8 /* HAPaperCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B02CA18AAF00D000DE3F8 /* HAPaperCollectionViewController.m */; };
 		1A1B02D918AAF0B9000DE3F8 /* HATransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B02D318AAF0B9000DE3F8 /* HATransitionController.m */; };
 		1A1B02DA18AAF0B9000DE3F8 /* HATransitionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B02D518AAF0B9000DE3F8 /* HATransitionLayout.m */; };
@@ -67,6 +72,16 @@
 		1811471A1961440200E93C23 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		1811471C1961440700E93C23 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		1811471E1961441500E93C23 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		1811472319615A1000E93C23 /* QuestCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestCell.h; sourceTree = "<group>"; };
+		1811472419615A1000E93C23 /* QuestCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestCell.m; sourceTree = "<group>"; };
+		1811472619615A1E00E93C23 /* QuestCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestCell.xib; sourceTree = "<group>"; };
+		186D6EB01961A58B00539A36 /* HAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAViewController.h; sourceTree = "<group>"; };
+		186D6EB11961A58B00539A36 /* HAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAViewController.m; sourceTree = "<group>"; };
+		186D6EB31961B1C100539A36 /* FBShimmering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmering.h; sourceTree = "<group>"; };
+		186D6EB41961B1C100539A36 /* FBShimmeringLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringLayer.h; sourceTree = "<group>"; };
+		186D6EB51961B1C100539A36 /* FBShimmeringLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringLayer.m; sourceTree = "<group>"; };
+		186D6EB61961B1C100539A36 /* FBShimmeringView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringView.h; sourceTree = "<group>"; };
+		186D6EB71961B1C100539A36 /* FBShimmeringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringView.m; sourceTree = "<group>"; };
 		1A1B02C918AAF00D000DE3F8 /* HAPaperCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAPaperCollectionViewController.h; sourceTree = "<group>"; };
 		1A1B02CA18AAF00D000DE3F8 /* HAPaperCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAPaperCollectionViewController.m; sourceTree = "<group>"; };
 		1A1B02D218AAF0B9000DE3F8 /* HATransitionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HATransitionController.h; sourceTree = "<group>"; };
@@ -132,10 +147,23 @@
 		181147031961390E00E93C23 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				186D6EAF1961950D00539A36 /* Shimmering */,
 				181147041961391800E93C23 /* AVOSCloud.framework */,
 				181147051961391800E93C23 /* AVOSCloudSNS.framework */,
 			);
 			name = Vendor;
+			sourceTree = "<group>";
+		};
+		186D6EAF1961950D00539A36 /* Shimmering */ = {
+			isa = PBXGroup;
+			children = (
+				186D6EB31961B1C100539A36 /* FBShimmering.h */,
+				186D6EB41961B1C100539A36 /* FBShimmeringLayer.h */,
+				186D6EB51961B1C100539A36 /* FBShimmeringLayer.m */,
+				186D6EB61961B1C100539A36 /* FBShimmeringView.h */,
+				186D6EB71961B1C100539A36 /* FBShimmeringView.m */,
+			);
+			name = Shimmering;
 			sourceTree = "<group>";
 		};
 		1A1B02C818AAEF83000DE3F8 /* Custom Layout */ = {
@@ -216,11 +244,16 @@
 				181147031961390E00E93C23 /* Vendor */,
 				1AA0CC2718A07EBC008F50F6 /* HAAppDelegate.h */,
 				1AA0CC2818A07EBC008F50F6 /* HAAppDelegate.m */,
+				1811472319615A1000E93C23 /* QuestCell.h */,
+				1811472419615A1000E93C23 /* QuestCell.m */,
+				1811472619615A1E00E93C23 /* QuestCell.xib */,
 				1A1B02DD18AAF68A000DE3F8 /* HASmallCollectionViewController.h */,
 				1A1B02DE18AAF68A000DE3F8 /* HASmallCollectionViewController.m */,
 				1811470819613C0500E93C23 /* LoginViewController.h */,
 				1811470919613C0500E93C23 /* LoginViewController.m */,
 				1811470A19613C0500E93C23 /* LoginViewController.xib */,
+				186D6EB01961A58B00539A36 /* HAViewController.h */,
+				186D6EB11961A58B00539A36 /* HAViewController.m */,
 				1A1B02DC18AAF630000DE3F8 /* Base Colection */,
 				1A1B02DB18AAF0C0000DE3F8 /* Transition */,
 				1A1B02C818AAEF83000DE3F8 /* Custom Layout */,
@@ -341,6 +374,7 @@
 				1AA0CC3118A07EBC008F50F6 /* Images.xcassets in Resources */,
 				1AA0CC2318A07EBC008F50F6 /* InfoPlist.strings in Resources */,
 				1AA0CC2C18A07EBC008F50F6 /* Main.storyboard in Resources */,
+				1811472719615A1E00E93C23 /* QuestCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,13 +396,17 @@
 				1A1B02D918AAF0B9000DE3F8 /* HATransitionController.m in Sources */,
 				1AFA137018A11F5D00F2D2BF /* HACollectionViewLargeLayout.m in Sources */,
 				1A1B02CB18AAF00D000DE3F8 /* HAPaperCollectionViewController.m in Sources */,
+				186D6EB91961B1C100539A36 /* FBShimmeringView.m in Sources */,
+				186D6EB21961A58B00539A36 /* HAViewController.m in Sources */,
 				18114712196142E300E93C23 /* DPZhuCeController.m in Sources */,
 				1AA0CC2518A07EBC008F50F6 /* main.m in Sources */,
 				1811470F196142C700E93C23 /* DPDengLuController.m in Sources */,
+				1811472519615A1000E93C23 /* QuestCell.m in Sources */,
 				1A1B02DA18AAF0B9000DE3F8 /* HATransitionLayout.m in Sources */,
 				1811470B19613C0500E93C23 /* LoginViewController.m in Sources */,
 				1AA0CC2918A07EBC008F50F6 /* HAAppDelegate.m in Sources */,
 				1AFA136D18A11E2400F2D2BF /* HACollectionViewSmallLayout.m in Sources */,
+				186D6EB81961B1C100539A36 /* FBShimmeringLayer.m in Sources */,
 				1A1B02DF18AAF68A000DE3F8 /* HASmallCollectionViewController.m in Sources */,
 				181147151961432200E93C23 /* DPConfig.m in Sources */,
 			);

@@ -9,6 +9,7 @@
 #import "HASmallCollectionViewController.h"
 #import "HACollectionViewLargeLayout.h"
 #import "DPDengLuController.h"
+#import <AVOSCloud/AVOSCloud.h>
 
 @interface HASmallCollectionViewController ()
 
@@ -41,6 +42,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    AVObject *testObject = [AVObject objectWithClassName:@"TestObject"];
+    [testObject setObject:@"bar" forKey:@"foo"];
+    [testObject save];
+
     
     //Gallery
     _galleryImages = @[@"Image", @"Image1", @"Image2", @"Image3", @"Image4"];

@@ -8,12 +8,14 @@
 
 #import "HAPaperCollectionViewController.h"
 #import "HATransitionLayout.h"
+#import <AVOSCloud/AVOSCloud.h>
+#import "QuestCell.h"
 
 #define MAX_COUNT 20
 #define CELL_ID @"CELL_ID"
 
 @interface HAPaperCollectionViewController ()
-
+@property (nonatomic, strong) NSArray *questArray;
 @end
 
 
@@ -23,7 +25,9 @@
 {
     if (self = [super initWithCollectionViewLayout:layout])
     {
-        [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:CELL_ID];
+//        [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:CELL_ID];
+        [self.collectionView registerClass:[QuestCell class] forCellWithReuseIdentifier:CELL_ID];
+        [self.collectionView registerNib:[UINib nibWithNibName:@"QuestCell" bundle:nil] forCellWithReuseIdentifier:CELL_ID];
         [self.collectionView setBackgroundColor:[UIColor clearColor]];
     }
     return self;
@@ -42,14 +46,16 @@
     cell.layer.cornerRadius = 4;
     cell.clipsToBounds = YES;
     
-    UIImageView *backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Cell"]];
+    QuestCell *qc = [collectionView dequeueReusableCellWithReuseIdentifier:CELL_ID forIndexPath:indexPath];
+    
+    UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Cell"]];
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 70, cell.bounds.size.width, 20)];
     label.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:13];
     label.text = @"do some thing";
     [cell addSubview:label];
     cell.backgroundView = backgroundView;
     
-    return cell;
+    return qc;
 }
 
 
@@ -85,6 +91,18 @@
     
     // Adjust scrollView decelerationRate
     self.collectionView.decelerationRate = self.class != [HAPaperCollectionViewController class] ? UIScrollViewDecelerationRateNormal : UIScrollViewDecelerationRateFast;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self loadQuest];
+}
+
+- (void)loadQuest {
+    AVQuery *query = [AVQuery queryWithClassName:@"Quest"];
+    NSArray *ar = [query findObjects];
+    NSLog(@"%d", ar.count);
+
 }
 
 @end
