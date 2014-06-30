@@ -14,7 +14,7 @@
 #define MAX_COUNT 20
 #define CELL_ID @"CELL_ID"
 
-@interface HAPaperCollectionViewController ()
+@interface HAPaperCollectionViewController () <QuestCellDelegate>
 @property (nonatomic, strong) NSArray *questArray;
 @end
 
@@ -47,6 +47,11 @@
     cell.clipsToBounds = YES;
     
     QuestCell *qc = [collectionView dequeueReusableCellWithReuseIdentifier:CELL_ID forIndexPath:indexPath];
+    if (self.questArray.count > 0) {
+        qc.titleLabel.text = [((AVObject *)self.questArray[indexPath.row]) objectForKey:@"QuestTitle"];
+
+    }
+    qc.delegate = self;
     
     UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Cell"]];
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 70, cell.bounds.size.width, 20)];
@@ -60,11 +65,7 @@
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return MAX_COUNT;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    
+    return self.questArray.count;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -101,8 +102,18 @@
 - (void)loadQuest {
     AVQuery *query = [AVQuery queryWithClassName:@"Quest"];
     NSArray *ar = [query findObjects];
+    self.questArray = ar;
+    [self.collectionView reloadData];
+    
+    
     NSLog(@"%d", ar.count);
-
 }
+
+- (void)questDidAccepted:(QuestCell *)cell withQuestId:(NSInteger)questId {
+    AVObject *a = self.questArray[questId];
+    NSArray *b = @[@"53b7b729e4b0cdeb6e247f94"];
+    
+}
+
 
 @end

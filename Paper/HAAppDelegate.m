@@ -28,6 +28,15 @@
     
     [AVOSCloud setApplicationId:@"xd7e1a5pb4uottcnd5l9wtk5fwdr32ky3bluqjb7jcqntuv0"
                       clientKey:@"1fznfevsvau3rg35cpda62o5xevu9oeicqzc53dkiobyr0zc"];
+    
+    [AVUser logInWithUsernameInBackground:@"zzz6519003" password:@"wanjyyt" block:^(AVUser *user, NSError *error) {
+        if (user != nil) {
+            NSLog(@"ok");
+        } else {
+            NSLog(@"no");
+        }
+    }];
+
 
     
     HACollectionViewSmallLayout *smallLayout = [[HACollectionViewSmallLayout alloc] init];
