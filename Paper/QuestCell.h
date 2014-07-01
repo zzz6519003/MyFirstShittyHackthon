@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FBShimmeringView.h"
 @class QuestCell;
 
 @protocol QuestCellDelegate <NSObject>
@@ -15,7 +16,7 @@
 
 @end
 
-@interface QuestCell : UICollectionViewCell
+@interface QuestCell : UICollectionViewCell <FBShimmering>
 
 @property (weak, nonatomic) id<QuestCellDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;

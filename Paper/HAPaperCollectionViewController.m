@@ -10,6 +10,7 @@
 #import "HATransitionLayout.h"
 #import <AVOSCloud/AVOSCloud.h>
 #import "QuestCell.h"
+#import "FBShimmeringView.h"
 
 #define MAX_COUNT 20
 #define CELL_ID @"CELL_ID"
@@ -47,11 +48,26 @@
     cell.clipsToBounds = YES;
     
     QuestCell *qc = [collectionView dequeueReusableCellWithReuseIdentifier:CELL_ID forIndexPath:indexPath];
+    qc.backgroundColor = [UIColor whiteColor];
+    qc.layer.cornerRadius = 4;
+    qc.clipsToBounds = YES;
+
     if (self.questArray.count > 0) {
         qc.titleLabel.text = [((AVObject *)self.questArray[indexPath.row]) objectForKey:@"QuestTitle"];
 
     }
     qc.delegate = self;
+    
+//    if (indexPath.row % 2 == 0) {
+//        FBShimmeringView *shimmeringView = [[FBShimmeringView alloc] initWithFrame:qc.bounds];
+//        [qc addSubview:shimmeringView];
+//        shimmeringView.contentView.frame = qc.titleLabel.frame;
+//        shimmeringView.contentView = qc.titleLabel;
+//        
+//        // Start shimmering.
+//        shimmeringView.shimmering = YES;
+//    }
+
     
     UIImageView *backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Cell"]];
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 70, cell.bounds.size.width, 20)];

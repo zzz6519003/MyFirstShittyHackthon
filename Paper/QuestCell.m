@@ -34,6 +34,7 @@
 }
 */
 - (IBAction)accept:(id)sender {
+    [sender setTintColor:[UIColor orangeColor]];
     [sender setTitle:@"Accepted" forState:UIControlStateNormal];
     if (self.delegate && [self.delegate respondsToSelector:@selector(questDidAccepted:withQuestId:)]) {
         [self.delegate questDidAccepted:self withQuestId:self.tag];

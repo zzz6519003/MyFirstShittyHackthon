@@ -13,14 +13,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="159" height="350"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="adsfasdfjqwoeirjqwoeirjq;oweirjq;wer" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="109" translatesAutoresizingMaskIntoConstraints="NO" id="mlv-lQ-KBR">
-                        <rect key="frame" x="20" y="52" width="109" height="203"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="adsfasdfjqwoeirjqwoeirjq;oweirjq;wer" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="106" translatesAutoresizingMaskIntoConstraints="NO" id="mlv-lQ-KBR">
+                        <rect key="frame" x="20" y="126" width="106" height="54"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="203" id="2zi-76-2iV"/>
-                        </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AuZ-IY-0j3">
@@ -34,11 +31,11 @@
                             <action selector="accept:" destination="IIA-ef-vb9" eventType="touchUpInside" id="lyi-w2-iCT"/>
                         </connections>
                     </button>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="See if she can give you her number" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="126" translatesAutoresizingMaskIntoConstraints="NO" id="Q9p-rX-4ig">
-                        <rect key="frame" x="16" y="271" width="126" height="21"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=" Detail: This is a pretty dangerous mission. See if she can give you her number, be careful. Should you choose to accept it." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="122" translatesAutoresizingMaskIntoConstraints="NO" id="Q9p-rX-4ig">
+                        <rect key="frame" x="20" y="271" width="122" height="142"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -47,9 +44,11 @@
             <constraints>
                 <constraint firstAttribute="centerY" secondItem="mlv-lQ-KBR" secondAttribute="centerY" constant="22" id="9vq-Gp-CsA"/>
                 <constraint firstItem="AuZ-IY-0j3" firstAttribute="top" secondItem="IIA-ef-vb9" secondAttribute="top" constant="500" id="A0X-Sk-oeq"/>
+                <constraint firstAttribute="trailing" secondItem="Q9p-rX-4ig" secondAttribute="trailing" constant="17" id="BVJ-3s-Lc3"/>
                 <constraint firstAttribute="centerX" secondItem="AuZ-IY-0j3" secondAttribute="centerX" constant="0.5" id="L31-fS-wrP"/>
+                <constraint firstItem="Q9p-rX-4ig" firstAttribute="leading" secondItem="IIA-ef-vb9" secondAttribute="leading" constant="16" id="Orx-7G-K0P"/>
                 <constraint firstItem="Q9p-rX-4ig" firstAttribute="top" secondItem="IIA-ef-vb9" secondAttribute="top" constant="300" id="WAm-hS-rmf"/>
-                <constraint firstItem="mlv-lQ-KBR" firstAttribute="top" secondItem="IIA-ef-vb9" secondAttribute="top" priority="750" constant="20" id="nEP-37-EK8"/>
+                <constraint firstItem="mlv-lQ-KBR" firstAttribute="top" secondItem="IIA-ef-vb9" secondAttribute="top" priority="750" constant="50" id="nEP-37-EK8"/>
                 <constraint firstAttribute="centerX" secondItem="mlv-lQ-KBR" secondAttribute="centerX" id="pGj-as-USM"/>
                 <constraint firstItem="mlv-lQ-KBR" firstAttribute="leading" secondItem="IIA-ef-vb9" secondAttribute="leading" constant="20" id="pP7-4e-0GG"/>
             </constraints>

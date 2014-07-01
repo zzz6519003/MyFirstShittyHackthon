@@ -11,6 +11,8 @@
 #import "DPDengLuController.h"
 #import "ViewController.h"
 #import <AVOSCloud/AVOSCloud.h>
+#import "FBShimmeringView.h"
+#import "FBShimmering.h"
 
 @interface HASmallCollectionViewController ()
 
@@ -97,23 +99,39 @@
     logo.backgroundColor = [UIColor clearColor];
     logo.textColor = [UIColor whiteColor];
     logo.font = [UIFont fontWithName:@"Helvetica-Bold" size:22];
-    logo.text = @"Paper";
+    logo.text = @"iQuest";
     [logo sizeToFit];
+    
+
     // Label Shadow
     [logo setClipsToBounds:NO];
     [logo.layer setShadowOffset:CGSizeMake(0, 0)];
     [logo.layer setShadowColor:[[UIColor blackColor] CGColor]];
     [logo.layer setShadowRadius:1.0];
     [logo.layer setShadowOpacity:0.6];
-    [_mainView addSubview:logo];
+//    [_mainView addSubview:logo];
     
+    FBShimmeringView *shimmeringView = [[FBShimmeringView alloc] initWithFrame:logo.frame];
+    
+//    [self.view addSubview:shimmeringView];
+    shimmeringView.shimmeringSpeed = 80;
+    
+    UILabel *loadingLabel = [[UILabel alloc] initWithFrame:shimmeringView.bounds];
+    loadingLabel.textAlignment = NSTextAlignmentCenter;
+    loadingLabel.text = NSLocalizedString(@"Shimmer", nil);
+    shimmeringView.contentView = logo;
+    
+    // Start shimmering.
+    shimmeringView.shimmering = YES;
+    [_mainView addSubview:shimmeringView];
+
     
     // Label Title
     UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(15, logo.frame.origin.y + CGRectGetHeight(logo.frame) + 8, 290, 0)];
     title.backgroundColor = [UIColor clearColor];
     title.textColor = [UIColor whiteColor];
     title.font = [UIFont fontWithName:@"Helvetica-Bold" size:13];
-    title.text = @"Heberti Almeida";
+    title.text = @"Mission Impossible?";
     [title sizeToFit];
     // Label Shadow
     [title setClipsToBounds:NO];
@@ -129,7 +147,7 @@
     subTitle.backgroundColor = [UIColor clearColor];
     subTitle.textColor = [UIColor whiteColor];
     subTitle.font = [UIFont fontWithName:@"Helvetica" size:13];
-    subTitle.text = @"Lorem ipsum dolor sit amet, consectetuer adipiscing elit";
+    subTitle.text = @"Impossible is nothing. Let's do it.";
     subTitle.lineBreakMode = NSLineBreakByWordWrapping;
     subTitle.numberOfLines = 0;
     [subTitle sizeToFit];
@@ -185,8 +203,8 @@
     ViewController *va = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     
     va.textArray = @[
-                   @"A lot of times, people don’t know what they want until you show it to them.",
-                   @"We’re just enthusiastic about what we do.",
+                   @"A lot of times, people don’t know what they want until you show it to them. A lot of times, people says that they feel so boring.",
+                   @"Do we have to live like this all our LIFE?",
                    @"Perhaps, we just need a goal, that is, a QUEST",
                    @"Introducing    iQuest      based on AVOSCloud©"
                    ];
