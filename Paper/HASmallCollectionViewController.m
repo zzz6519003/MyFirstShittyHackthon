@@ -9,6 +9,7 @@
 #import "HASmallCollectionViewController.h"
 #import "HACollectionViewLargeLayout.h"
 #import "DPDengLuController.h"
+#import "ViewController.h"
 #import <AVOSCloud/AVOSCloud.h>
 
 @interface HASmallCollectionViewController ()
@@ -149,7 +150,7 @@
     [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
     
     //
-    UILongPressGestureRecognizer *uilp = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(showLogin)];
+    UILongPressGestureRecognizer *uilp = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(showIntro)];
     [self.view addGestureRecognizer:uilp];
 }
 
@@ -174,6 +175,12 @@
 - (void)showLogin {
     DPDengLuController *con = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"DPDengLuController"];
     [self presentViewController:con animated:YES completion:nil];
+}
+
+- (void)showIntro {
+    ViewController *va = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+//    UIViewController *va = [UIViewController new];
+    [self presentViewController:va animated:YES completion:nil];
 }
 
 @end

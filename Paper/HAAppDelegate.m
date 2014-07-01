@@ -10,6 +10,7 @@
 #import "HATransitionController.h"
 #import "HACollectionViewSmallLayout.h"
 #import "HASmallCollectionViewController.h"
+#import "ViewController.h"
 #import <AVOSCloud/AVOSCloud.h>
 
 @interface HAAppDelegate () <UINavigationControllerDelegate, HATransitionControllerDelegate>
@@ -38,7 +39,9 @@
     }];
 
 
-    
+    ViewController *va = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    self.window.rootViewController = va;
+
     HACollectionViewSmallLayout *smallLayout = [[HACollectionViewSmallLayout alloc] init];
     HASmallCollectionViewController *collectionViewController = [[HASmallCollectionViewController alloc] initWithCollectionViewLayout:smallLayout];
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:collectionViewController];

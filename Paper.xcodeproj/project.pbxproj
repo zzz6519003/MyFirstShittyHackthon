@@ -24,6 +24,11 @@
 		186D6EB21961A58B00539A36 /* HAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186D6EB11961A58B00539A36 /* HAViewController.m */; };
 		186D6EB81961B1C100539A36 /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 186D6EB51961B1C100539A36 /* FBShimmeringLayer.m */; };
 		186D6EB91961B1C100539A36 /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = 186D6EB71961B1C100539A36 /* FBShimmeringView.m */; };
+		188B4E9019623562009007DE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188B4E8F19623562009007DE /* ViewController.m */; };
+		188B4E941962360C009007DE /* RQShineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 188B4E931962360C009007DE /* RQShineLabel.m */; };
+		188B4E96196238AA009007DE /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188B4E95196238AA009007DE /* ViewController.xib */; };
+		188B4E9A19623C4B009007DE /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 188B4E9819623C4B009007DE /* WelcomeViewController.m */; };
+		188B4E9B19623C4B009007DE /* WelcomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 188B4E9919623C4B009007DE /* WelcomeViewController.xib */; };
 		1A1B02CB18AAF00D000DE3F8 /* HAPaperCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B02CA18AAF00D000DE3F8 /* HAPaperCollectionViewController.m */; };
 		1A1B02D918AAF0B9000DE3F8 /* HATransitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B02D318AAF0B9000DE3F8 /* HATransitionController.m */; };
 		1A1B02DA18AAF0B9000DE3F8 /* HATransitionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1B02D518AAF0B9000DE3F8 /* HATransitionLayout.m */; };
@@ -82,6 +87,14 @@
 		186D6EB51961B1C100539A36 /* FBShimmeringLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringLayer.m; sourceTree = "<group>"; };
 		186D6EB61961B1C100539A36 /* FBShimmeringView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringView.h; sourceTree = "<group>"; };
 		186D6EB71961B1C100539A36 /* FBShimmeringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringView.m; sourceTree = "<group>"; };
+		188B4E8E19623562009007DE /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		188B4E8F19623562009007DE /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		188B4E921962360C009007DE /* RQShineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RQShineLabel.h; sourceTree = "<group>"; };
+		188B4E931962360C009007DE /* RQShineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RQShineLabel.m; sourceTree = "<group>"; };
+		188B4E95196238AA009007DE /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		188B4E9719623C4B009007DE /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
+		188B4E9819623C4B009007DE /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		188B4E9919623C4B009007DE /* WelcomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WelcomeViewController.xib; sourceTree = "<group>"; };
 		1A1B02C918AAF00D000DE3F8 /* HAPaperCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAPaperCollectionViewController.h; sourceTree = "<group>"; };
 		1A1B02CA18AAF00D000DE3F8 /* HAPaperCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAPaperCollectionViewController.m; sourceTree = "<group>"; };
 		1A1B02D218AAF0B9000DE3F8 /* HATransitionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HATransitionController.h; sourceTree = "<group>"; };
@@ -147,6 +160,7 @@
 		181147031961390E00E93C23 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				188B4E91196235E9009007DE /* RQShineLabel */,
 				186D6EAF1961950D00539A36 /* Shimmering */,
 				181147041961391800E93C23 /* AVOSCloud.framework */,
 				181147051961391800E93C23 /* AVOSCloudSNS.framework */,
@@ -164,6 +178,15 @@
 				186D6EB71961B1C100539A36 /* FBShimmeringView.m */,
 			);
 			name = Shimmering;
+			sourceTree = "<group>";
+		};
+		188B4E91196235E9009007DE /* RQShineLabel */ = {
+			isa = PBXGroup;
+			children = (
+				188B4E921962360C009007DE /* RQShineLabel.h */,
+				188B4E931962360C009007DE /* RQShineLabel.m */,
+			);
+			name = RQShineLabel;
 			sourceTree = "<group>";
 		};
 		1A1B02C818AAEF83000DE3F8 /* Custom Layout */ = {
@@ -249,6 +272,12 @@
 				1811472619615A1E00E93C23 /* QuestCell.xib */,
 				1A1B02DD18AAF68A000DE3F8 /* HASmallCollectionViewController.h */,
 				1A1B02DE18AAF68A000DE3F8 /* HASmallCollectionViewController.m */,
+				188B4E8E19623562009007DE /* ViewController.h */,
+				188B4E8F19623562009007DE /* ViewController.m */,
+				188B4E95196238AA009007DE /* ViewController.xib */,
+				188B4E9719623C4B009007DE /* WelcomeViewController.h */,
+				188B4E9819623C4B009007DE /* WelcomeViewController.m */,
+				188B4E9919623C4B009007DE /* WelcomeViewController.xib */,
 				1811470819613C0500E93C23 /* LoginViewController.h */,
 				1811470919613C0500E93C23 /* LoginViewController.m */,
 				1811470A19613C0500E93C23 /* LoginViewController.xib */,
@@ -371,9 +400,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1811470C19613C0500E93C23 /* LoginViewController.xib in Resources */,
+				188B4E9B19623C4B009007DE /* WelcomeViewController.xib in Resources */,
 				1AA0CC3118A07EBC008F50F6 /* Images.xcassets in Resources */,
 				1AA0CC2318A07EBC008F50F6 /* InfoPlist.strings in Resources */,
 				1AA0CC2C18A07EBC008F50F6 /* Main.storyboard in Resources */,
+				188B4E96196238AA009007DE /* ViewController.xib in Resources */,
 				1811472719615A1E00E93C23 /* QuestCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,9 +424,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				188B4E9019623562009007DE /* ViewController.m in Sources */,
 				1A1B02D918AAF0B9000DE3F8 /* HATransitionController.m in Sources */,
 				1AFA137018A11F5D00F2D2BF /* HACollectionViewLargeLayout.m in Sources */,
 				1A1B02CB18AAF00D000DE3F8 /* HAPaperCollectionViewController.m in Sources */,
+				188B4E9A19623C4B009007DE /* WelcomeViewController.m in Sources */,
 				186D6EB91961B1C100539A36 /* FBShimmeringView.m in Sources */,
 				186D6EB21961A58B00539A36 /* HAViewController.m in Sources */,
 				18114712196142E300E93C23 /* DPZhuCeController.m in Sources */,
@@ -403,6 +436,7 @@
 				1811470F196142C700E93C23 /* DPDengLuController.m in Sources */,
 				1811472519615A1000E93C23 /* QuestCell.m in Sources */,
 				1A1B02DA18AAF0B9000DE3F8 /* HATransitionLayout.m in Sources */,
+				188B4E941962360C009007DE /* RQShineLabel.m in Sources */,
 				1811470B19613C0500E93C23 /* LoginViewController.m in Sources */,
 				1AA0CC2918A07EBC008F50F6 /* HAAppDelegate.m in Sources */,
 				1AFA136D18A11E2400F2D2BF /* HACollectionViewSmallLayout.m in Sources */,
