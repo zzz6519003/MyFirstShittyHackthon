@@ -12,12 +12,12 @@
 #import "HATransitionController.h"
 #import "HACollectionViewSmallLayout.h"
 #import "HASmallCollectionViewController.h"
+#import "FBShimmering.h"
+#import "FBShimmeringView.h"
 
 
 @interface ViewController ()
 @property (strong, nonatomic) RQShineLabel *shineLabel;
-@property (strong, nonatomic) NSArray *textArray;
-@property (assign, nonatomic) NSUInteger textIndex;
 @property (strong, nonatomic) UIImageView *wallpaper1;
 @property (strong, nonatomic) UIImageView *wallpaper2;
 
@@ -26,33 +26,12 @@
 
 @implementation ViewController
 
-- (id)initWithCoder:(NSCoder *)decoder
-{
-    if (self = [super initWithCoder:decoder]) {
-        _textArray = @[
-                       @"For something this complicated, it’s really hard to design products by focus groups. A lot of times, people don’t know what they want until you show it to them.",
-                       @"We’re just enthusiastic about what we do.",
-                       @"We made the buttons on the screen look so good you’ll want to lick them.",
-                       
-                       ];
-        _textIndex  = 0;
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
     
-    _textArray = @[
-                   @"For something this complicated, it’s really hard to design products by focus groups. A lot of times, people don’t know what they want until you show it to them.",
-                   @"We’re just enthusiastic about what we do.",
-                   @"We made the buttons on the screen look so good you’ll want to lick them.",
-                   @"Introducing    iQuest      based on AVOSCloud©"
-                   ];
-    _textIndex  = 0;
 
     self.wallpaper1 = ({
         UIImageView *imageView =  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"wallpaper1"]];
@@ -81,9 +60,20 @@
         label.center = self.view.center;
         label;
     });
-    [self.view addSubview:self.shineLabel];
+//    [self.view addSubview:self.shineLabel];
     
+    FBShimmeringView *shimmeringView = [[FBShimmeringView alloc] initWithFrame:CGRectMake(16, 16, 320 - 32, CGRectGetHeight(self.view.bounds) - 16)];
+    [self.view addSubview:shimmeringView];
     
+    UILabel *loadingLabel = [[UILabel alloc] initWithFrame:shimmeringView.bounds];
+    loadingLabel.textAlignment = NSTextAlignmentCenter;
+    loadingLabel.text = NSLocalizedString(@"Shimmer", nil);
+    shimmeringView.contentView = self.shineLabel;
+    [self.view addSubview:shimmeringView];
+    
+    // Start shimmering.
+    shimmeringView.shimmering = YES;
+
     UILongPressGestureRecognizer *lp = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(dismiss)];
     [self.view addGestureRecognizer:lp];
 

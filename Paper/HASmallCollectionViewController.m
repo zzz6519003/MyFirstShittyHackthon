@@ -152,6 +152,10 @@
     //
     UILongPressGestureRecognizer *uilp = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(showIntro)];
     [self.view addGestureRecognizer:uilp];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showThanks)];
+    tap.numberOfTapsRequired = 3;
+    [self.view addGestureRecognizer:tap];
 }
 
 #pragma mark - Change slider
@@ -179,8 +183,23 @@
 
 - (void)showIntro {
     ViewController *va = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    
+    va.textArray = @[
+                   @"A lot of times, people don’t know what they want until you show it to them.",
+                   @"We’re just enthusiastic about what we do.",
+                   @"Perhaps, we just need a goal, that is, a QUEST",
+                   @"Introducing    iQuest      based on AVOSCloud©"
+                   ];
+    va.textIndex  = 0;
+
 //    UIViewController *va = [UIViewController new];
     [self presentViewController:va animated:YES completion:nil];
 }
 
+- (void)showThanks {
+    ViewController *va = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
+    va.textArray = @[@"Thanks, AVOSCloud.                                                Without you, the server-side coding might need much more time..."];
+    va.textIndex = 0;
+    [self presentViewController:va animated:YES completion:nil];
+}
 @end

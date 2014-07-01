@@ -10,4 +10,8 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) NSArray *textArray;
+@property (assign, nonatomic) NSUInteger textIndex;
+
+
 @end
